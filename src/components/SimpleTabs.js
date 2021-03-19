@@ -13,6 +13,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
+import img from "../assets/logo.png";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -65,6 +66,7 @@ export default function SimpleTabs() {
     <div className={classes.root}>
       <AppBar position="static">
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
+          <Tab><img src={img} loading="lazy"/></Tab>
           <Tab label="Home" {...a11yProps(0)} />
           <Tab label="About" {...a11yProps(1)} />
           <Tab label="Projects" {...a11yProps(2)} />
@@ -72,16 +74,19 @@ export default function SimpleTabs() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        Home<Home/>
+        <Home/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        About<About/>
+        <Home/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Projects<Projects/>
+        <About/>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Contact<Contact/>
+        <Projects/>
+      </TabPanel>
+      <TabPanel value={value} index={4}>
+        <Contact/>
       </TabPanel>
     </div>
   );
