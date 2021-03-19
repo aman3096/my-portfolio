@@ -32,6 +32,7 @@ export default function Projects() {
   return (
     <div className={classes.row}>
      <h2>My Projects</h2>  
+     This is just the sample piece not actual projects. More work uploading on site soon.
      <hr className={classes.hr}/>
      <div className={classes.rows}>
                     <div className={classes.textCenter}>
